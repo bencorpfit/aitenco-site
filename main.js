@@ -142,6 +142,30 @@
       links.classList.remove('open');
     });
   });
+
+  // Close on Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && links.classList.contains('open')) {
+      btn.setAttribute('aria-expanded', 'false');
+      links.classList.remove('open');
+      btn.focus();
+    }
+  });
+
+  // Focus trap when menu is open
+  links.addEventListener('keydown', function (e) {
+    if (e.key !== 'Tab' || !links.classList.contains('open')) return;
+    var focusable = links.querySelectorAll('a, button');
+    var first = focusable[0];
+    var last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
 })();
 
 /* -- CONTACT FORM -- */
@@ -160,10 +184,7 @@
 
     var data = {
       firstName: form.firstName.value,
-      lastName: form.lastName.value,
       email: form.email.value,
-      company: form.company.value,
-      industry: form.industry.value,
       challenge: form.challenge.value,
       website: form.website ? form.website.value : ''
     };
@@ -212,8 +233,6 @@
 /* -- FAQ ACCORDION -- */
 (function () {
   document.querySelectorAll('.faq-q').forEach(function (q) {
-    q.setAttribute('role', 'button');
-    q.setAttribute('tabindex', '0');
     q.setAttribute('aria-expanded', 'false');
 
     var answer = q.nextElementSibling;
@@ -223,17 +242,9 @@
       q.setAttribute('aria-controls', answer.id);
     }
 
-    function toggle() {
+    q.addEventListener('click', function () {
       var isOpen = q.parentElement.classList.toggle('open');
       q.setAttribute('aria-expanded', String(isOpen));
-    }
-
-    q.addEventListener('click', toggle);
-    q.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        toggle();
-      }
     });
   });
 })();

@@ -23,7 +23,8 @@
   <meta name="theme-color" content="#080a0f" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="/style.css">
   <script type="application/ld+json">
   {
@@ -571,27 +572,27 @@
   <h2 class="reveal">Everything You<br>Need to Know</h2>
   <div class="faq-list">
     <div class="faq-item reveal">
-      <div class="faq-q">How long before we see results?</div>
+      <button type="button" class="faq-q">How long before we see results?</button>
       <div class="faq-a"><p>First measurable results within 30 days. Our audit phase takes 1-2 weeks, and the first working system is typically deployed by week 4. You see tangible impact before the first invoice cycle ends.</p></div>
     </div>
     <div class="faq-item reveal">
-      <div class="faq-q">Do we need to change our existing tools?</div>
+      <button type="button" class="faq-q">Do we need to change our existing tools?</button>
       <div class="faq-a"><p>No. We integrate via APIs into your existing platforms (Meta, Google, CRM, Salesforce, etc.) without modifying them. Zero disruption to your current operations. Your team keeps using the tools they know.</p></div>
     </div>
     <div class="faq-item reveal">
-      <div class="faq-q">Is our data safe?</div>
+      <button type="button" class="faq-q">Is our data safe?</button>
       <div class="faq-a"><p>Absolutely. All solutions are GDPR compliant by design. We don't store your data. We use professional APIs with contractual privacy guarantees. Human validation is applied on all critical outputs. Full transparency and auditability on every decision.</p></div>
     </div>
     <div class="faq-item reveal">
-      <div class="faq-q">What if the automated system makes a mistake?</div>
+      <button type="button" class="faq-q">What if the automated system makes a mistake?</button>
       <div class="faq-a"><p>Every critical output goes through human-in-the-loop validation before delivery. The system handles execution, your team handles judgment. We build in safeguards, not blind trust. Modular deployment means you test one system before scaling.</p></div>
     </div>
     <div class="faq-item reveal">
-      <div class="faq-q">How is this different from hiring a consultant?</div>
+      <button type="button" class="faq-q">How is this different from hiring a consultant?</button>
       <div class="faq-a"><p>Traditional consultants deliver recommendations. We deliver working systems in production. No 50-page strategy decks. No 12-week discovery phases. You get systems that produce results every day, not advice you still need to implement yourself.</p></div>
     </div>
     <div class="faq-item reveal">
-      <div class="faq-q">What does the Readiness Assessment include?</div>
+      <button type="button" class="faq-q">What does the Readiness Assessment include?</button>
       <div class="faq-a"><p>A complimentary session where we audit your current workflows, identify your top 3 automation opportunities, estimate the potential impact, and deliver a custom roadmap. No commitment required. You walk away with actionable insights regardless.</p></div>
     </div>
   </div>
@@ -606,46 +607,23 @@
     <form id="contactForm" class="contact-form reveal">
       <div class="form-row">
         <div>
-          <label for="firstName" class="sr-only">First Name</label>
-          <input type="text" id="firstName" name="firstName" placeholder="First Name" required autocomplete="given-name" />
+          <label for="firstName" class="sr-only">Your Name</label>
+          <input type="text" id="firstName" name="firstName" placeholder="Your Name" required autocomplete="given-name" />
         </div>
-        <div>
-          <label for="lastName" class="sr-only">Last Name</label>
-          <input type="text" id="lastName" name="lastName" placeholder="Last Name" autocomplete="family-name" />
-        </div>
-      </div>
-      <div class="form-row">
         <div>
           <label for="email" class="sr-only">Business Email</label>
           <input type="email" id="email" name="email" placeholder="Business Email" required autocomplete="email" />
         </div>
-        <div>
-          <label for="company" class="sr-only">Company Name</label>
-          <input type="text" id="company" name="company" placeholder="Company Name" autocomplete="organization" />
-        </div>
       </div>
       <div>
-        <label for="industry" class="sr-only">Your Industry</label>
-        <select id="industry" name="industry">
-          <option value="" disabled selected>Your Industry</option>
-          <option value="Marketing &amp; Agencies">Marketing &amp; Agencies</option>
-          <option value="Finance &amp; Banking">Finance &amp; Banking</option>
-          <option value="Insurance">Insurance</option>
-          <option value="Real Estate">Real Estate</option>
-          <option value="Retail &amp; E-commerce">Retail &amp; E-commerce</option>
-          <option value="Operations &amp; Logistics">Operations &amp; Logistics</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-      <div>
-        <label for="challenge" class="sr-only">Your biggest operational challenge</label>
-        <textarea id="challenge" name="challenge" placeholder="What's your biggest operational challenge? What tasks consume the most time for your team?"></textarea>
+        <label for="challenge" class="sr-only">What would you like to automate?</label>
+        <textarea id="challenge" name="challenge" placeholder="What would you like to automate? What tasks consume the most time for your team?"></textarea>
       </div>
       <div aria-hidden="true" style="position:absolute;left:-9999px;">
         <label for="website">Website</label>
         <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
       </div>
-      <button type="submit" class="btn-submit">Request Your Assessment</button>
+      <button type="submit" class="btn-submit">Request Your Free Assessment</button>
       <div id="formStatus" class="form-status" aria-live="polite"></div>
     </form>
     <p class="contact-alt reveal">Or reach out directly: <a href="mailto:hello@aitenco.com">hello@aitenco.com</a></p>
