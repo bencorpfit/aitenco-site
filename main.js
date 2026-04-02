@@ -164,7 +164,8 @@
       email: form.email.value,
       company: form.company.value,
       industry: form.industry.value,
-      challenge: form.challenge.value
+      challenge: form.challenge.value,
+      website: form.website ? form.website.value : ''
     };
 
     fetch('/api/contact', {
