@@ -2,7 +2,7 @@
 
 ## Project
 
-AITENCO is a B2B AI consulting/automation advisory firm. This repo is the marketing website: a static single-page site deployed on Vercel.
+AITENCO is a Dubai-based AI automation studio. This repo is the marketing website: a static single-page site deployed on Vercel.
 
 - **URL:** https://aitenco.com
 - **Stack:** Static HTML + CSS + vanilla JS (no build step, no framework)
@@ -69,6 +69,20 @@ aitenco-site/
 - robots.txt + sitemap.xml
 - SVG favicon
 
+## Security
+
+- CSP + HSTS headers in vercel.json
+- Email regex validation + input sanitization in api/contact.js
+- Honeypot anti-bot field (hidden 'website' input)
+- CORS restricted to aitenco.com origin
+- No PII in server logs
+
+## Positioning
+
+- Brand: "AI Automation Studio" (not "Advisory" - we build, not advise)
+- Headline: "We Build the AI Systems Your Team Actually Uses."
+- Geo: "Based in Dubai, Serving the Gulf region" (honest, no fake offices)
+
 ## What's Not Done Yet
 
 - HubSpot account setup (need PORTAL_ID + FORM_GUID)
@@ -76,4 +90,8 @@ aitenco-site/
 - OG image (og-image.png 1200x630)
 - Self-hosted fonts (currently Google Fonts CDN)
 - Analytics (GA4 or Plausible)
+- Social proof (testimonials, client logos, case studies)
+- Team photos + LinkedIn links
+- Reduce form to 3 fields
+- Replace canvas with value content (video, screenshot, case study)
 - Arabic version / RTL
