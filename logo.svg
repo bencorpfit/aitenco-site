@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="g" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#e8c86a"/>
+      <stop offset="100%" stop-color="#c9a84c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left leg of A -->
+  <line x1="50" y1="8" x2="12" y2="88" stroke="url(#g)" stroke-width="5" stroke-linecap="round"/>
+  <!-- Right leg of A -->
+  <line x1="50" y1="8" x2="88" y2="88" stroke="url(#g)" stroke-width="5" stroke-linecap="round"/>
+  <!-- Crossbar -->
+  <line x1="30" y1="60" x2="70" y2="60" stroke="url(#g)" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Top node (apex) -->
+  <circle cx="50" cy="8" r="7" fill="url(#g)"/>
+  <!-- Crossbar left node -->
+  <circle cx="30" cy="60" r="5" fill="url(#g)"/>
+  <!-- Crossbar center node (hollow) -->
+  <circle cx="50" cy="60" r="6" stroke="url(#g)" stroke-width="2.5" fill="none"/>
+  <circle cx="50" cy="60" r="2.5" fill="url(#g)"/>
+  <!-- Crossbar right node -->
+  <circle cx="70" cy="60" r="5" fill="url(#g)"/>
+  <!-- Bottom-left node -->
+  <circle cx="12" cy="88" r="5" fill="url(#g)"/>
+  <!-- Bottom-right node -->
+  <circle cx="88" cy="88" r="5" fill="url(#g)"/>
+</svg>
