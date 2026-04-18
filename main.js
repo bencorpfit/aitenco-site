@@ -8,6 +8,7 @@
   }
   setTimeout(function () {
     intro.classList.add('done');
+    setTimeout(function () { intro.remove(); }, 1000);
   }, 2400);
 })();
 
